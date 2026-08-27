@@ -15,7 +15,7 @@ const stats = [
 export default function Page() {
   const { isLoggedIn } = useAuth()
   return <>
-    <section className="mb-8 flex items-end justify-between gap-6 rounded-2xl border border-border bg-primary p-7 text-primary-foreground portal-surface max-[680px]:flex-col max-[680px]:items-start max-[680px]:p-5">
+    <section className="mb-8 flex items-end justify-between gap-6 rounded-2xl border border-primary/20 bg-primary p-7 text-primary-foreground portal-surface shadow-[0_18px_0_var(--secondary)] max-[680px]:flex-col max-[680px]:items-start max-[680px]:p-5">
       <div><div className="mb-3 flex flex-wrap items-center gap-3"><span className="text-[10px] font-bold uppercase tracking-[0.16em] text-primary-foreground/60">MONDAY, 24 FEBRUARY 2025</span>{isLoggedIn && <span className="rounded-full bg-accent/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground"><ShieldCheck className="mr-1 inline size-3" />Admin Mode</span>}</div><h2 className="max-w-xl text-3xl font-bold tracking-tight text-balance max-[680px]:text-2xl">A clear view of your security workspace.</h2><p className="mt-3 max-w-lg text-sm leading-6 text-primary-foreground/65">Find the latest policies, operational guidance, and audit activity maintained by the Information Security team.</p></div>
       <Link href="/audits" className="inline-flex flex-none items-center gap-2 rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground hover:bg-accent/85"><CalendarDays className="size-4" />View audit schedule</Link>
     </section>
